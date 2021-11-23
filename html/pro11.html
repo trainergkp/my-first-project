@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function validator()
+{
+var user=document.mydata.uname.value;
+var pss=document.mydata.pwd.value;
+var mob=document.mydata.mobile.value;
+var mail=document.mydata.email.value;
+if(user=="" || user==null)
+{
+	alert("username field required ");
+	return false;
+}
+if(pss=="" || pss==null)
+{
+	alert("Password field required");
+	return false;
+}
+if(mob=="" || mob==null)
+{
+	alert("Mobile field required");
+	return false;
+}
+else if(isNaN(mob) || mob.length!=10)
+{
+	alert("Please enter valid mobile number");
+	return false;
+	
+}
+if(mail=="" || mail==null)
+{
+	alert("E-mail field required");
+	return false;
+}
+else 
+{
+	var atp=mail.indexOf("@");
+	var dotp=mail.lastIndexOf(".");
+	if(atp<1 || dotp<atp+2 || dotp+2>mail.length)
+	{
+		alert("Please enter valid E-mail ID");
+		return false;
+	}
+	
+}
+return true;
+}
+</script>
+
+</head>
+<body>
+<h2>Example of Javascript</h2>
+<p id="para">Javascript example</p>
+<form name="mydata" onsubmit="return validator()">
+User name :<br />
+<input type="text" name="uname"><br />
+Password :<br />
+<input type="text" name="pwd"><br />
+Mobile :<br />
+<input type="text" name="mobile"><br />
+E-mail :<br />
+<input type="text" name="email"><br />
+<input type="submit" value="Sign In">
+
+</form>
+</body>
+</html>

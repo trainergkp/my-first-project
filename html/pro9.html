@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function myfunc()
+{
+var x=parseInt(prompt("Enter first value"));
+var y=parseInt(prompt("Enter second value"));
+var z=sum(x,y);
+
+document.getElementById("para").innerHTML="Sum of two numbers :"+z ;
+}
+function sum(a,b)
+{
+	return a+b;
+}
+</script>
+
+</head>
+<body>
+<h2>Example of Javascript</h2>
+<p id="para">DXC Technology</p>
+<button type="button" onclick="myfunc()">Click Me</button>
+
+</body>
+</html>
